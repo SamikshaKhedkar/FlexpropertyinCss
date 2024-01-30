@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive by using flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            background-image: url(imgs/tree.jpg);
+            background-position: center;
+            background-size: 100% 100%;
+            background-color: aquamarine;
+        }
+        .warrper{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+            /* background-color: lightblue; */
+            min-height: 60px;
+        }
+        #logomenu-main{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            min-height: 60px;
+            /* background-color: plum; */
+            gap: 1em;
+
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+            flex-basis: 45%;
+            background-color: turquoise;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            gap: 1rem;
+        }
+        .logo h2
+        {
+            color: white;
+        }
+       .logo h2:hover{
+        background-color: green;
+       }
+        .menu{
+            display: flex;
+            flex-direction: row;
+            flex-basis: 51%;
+            background-color: turquoise;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            /* text-decoration: none; */
+        }
+        .menu li{
+            display: flex;
+            flex-direction: row;
+           
+            align-items: center;
+            justify-content: center;
+             padding: 1rem;
+
+        }
+        
+        .menu ul li a{
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .menu ul li a:hover{
+            background-color: darkcyan;
+            color: white;
+        }
+
+        #slider{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: khaki;
+            /* align-items: center;
+            justify-content: center; */
+            min-height: 200px;
+            margin-top: 1rem;
+            
+        }
+        #slider .head{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            font-size: 2em;
+            
+        }
+
+        #slider .para1{
+             margin-top: 1rem;
+            text-align: justify;
+        }
+
+
+        #threebox-main{
+            display: flex;
+            flex-direction: row;
+            /* background-color: slategrey; */
+            width: 100%;
+            min-height: 300px;
+            margin-top: 1rem;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        #threebox-main .box{
+            display: flex;
+            flex-direction: row;
+            background-color: rosybrown;
+            flex-basis: 32%;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        #threebox-main .box  img{
+           width: 350px;
+           height: 300px;
+            
+        }
+        .content{
+            display: flex;
+            flex-direction: row;
+            background-color: burlywood;
+            width: 100%;
+            min-height: 230px;
+            justify-content: center;
+            text-align: center;
+            margin-top: 1rem;
+            gap: 1rem;
+        }
+
+        .content p{
+            text-align: justify;
+        }
+
+        .content .div1
+        {
+            margin-top: 1rem;
+        }
+        .content .div1 p{
+            padding: 1rem;
+        }
+
+        .content .div2
+        {
+            margin-top: 1rem;
+        }
+        .content .div2 p{
+            padding: 1rem;
+        }
+
+
+        .content .div3
+        {
+            margin-top: 1rem;
+        }
+        .content .div3 p{
+            padding: 1rem;
+        }
+
+        #footer{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            min-height: 60px;
+            background-color: darkgray;
+            margin-top: 1rem;
+        }
+        @media only screen and (max-width: 780px) {
+            #logomenu-main{
+                flex-direction: column;
+            }
+
+            #logomenu-main .logo{
+                min-height: 4em;
+            }
+
+            #logomenu-main .menu{
+                min-height: 5em;
+            }
+
+            #threebox-main{
+                display: flex;
+                flex-direction: column;
+            }
+
+            #threebox-main .box{
+                min-height: 200px;
+            }
+            .logo h3{
+                
+            }
+
+            #slider .para1{
+
+            }
+            .content 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        /* .content .div1
+        {
+            min-height: 100px;
+        } */
+
+        }
+        #footer
+        {
+            display: flex;
+            flex-direction: row;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            font-size: 1em;
+            color: azure;
+        }
+        #footer a{
+           text-decoration: none;
+           color: blue;
+        }
+
+
+    @media only screen and (min-width: 550px)
+    {
+        /* .logo h2{
+            font-size: 3em;
+            color: white;
+        } */
+        /* .content 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .content .div1
+        {
+            min-height: 100px;
+        } */
+
+    }
+    </style>
+</head>
+<body>
+    <div class="warrper">
+        <div id="logomenu-main">
+
+            <div class="logo">
+
+                <h2>WEBSITE NAME</h2>
+               
+                      
+                <img src="imgs/what.png">
+                 <!-- <img src="imgs/twi.png" alt=""> -->
+                <!-- <img src="imgs/tele.png" alt="">
+                <img src="imgs/snap.png" alt=""> -->
+                <!-- <img src="imgs/face.png" alt=""> -->
+                <img src="imgs/insta.png" alt=""> 
+            
+                
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="slider">
+            <div class="head"><b>Decsription!!!</b></div>
+            <div class="para1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, dicta eaque id sed dolorem est vero deleniti quod impedit possimus facilis. Sit dolorum, earum ipsam nulla eius quaerat a ex?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores fugit cum beatae error asperiores nostrum, debitis quisquam aspernatur obcaecati minus suscipit amet architecto esse unde explicabo. Est, fuga aliquid?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, dolores nostrum recusandae ducimus fuga sunt obcaecati eius excepturi repellat perferendis alias, adipisci quis voluptatum rerum animi labore totam veritatis voluptatibus?
+
+            </div>
+        </div>
+         
+        <div id="threebox-main">
+            <div class="box">
+               <img src="imgs/bur1.jpg"  alt="no">
+            </div>
+            <div class="box">
+                <img src="imgs/piz1.jpg"  alt="no">
+            </div>
+            <div class="box">
+                <img src="imgs/fre1.jpg"  alt="no">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="div1">
+            <h3>PIZZA:-</h3>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo pariatur beatae quibusdam facere quod, laudantium minus sunt distinctio expedita labore. Similique atque, quis deserunt necessitatibus eaque eum eius aliquid sit?
+            </P>
+        </div>
+           <div class="div2">
+            <h3>BURGER:-</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nam eius reiciendis consectetur nihil nisi voluptatem, non dolores nostrum. Fugit quam sequi quidem dolores quos at. Tenetur mollitia expedita voluptates!
+           </p>
+        </div>
+        <div class="div3">
+           <h3>FRENCH-FARIES:-</h3>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nam eius reiciendis consectetur nihil nisi voluptatem, non dolores nostrum. Fugit quam sequi quidem dolores quos at. Tenetur mollitia expedita voluptates!
+          </p>
+        </div>
+
+        </div>
+        <div id="footer">
+            <address>Warje pune 445101</address>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://web.whatsapp.com/">Whatapp</a>
+        </div>
+    </div>
+    
+</body>
+</html>
